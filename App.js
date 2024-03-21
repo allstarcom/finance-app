@@ -1,13 +1,26 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { useEffect } from 'react';
+import { StyleSheet } from 'react-native';
+import { Transaction, Summary } from './src/Screens/index';
+import { NavigationContainer } from '@react-navigation/native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { useDispatch, Provider } from 'react-redux';
+import { store } from './src/redux/store.js';
+import Apploader from './src/components/Apploader/index.js';
+
+const Tab = createBottomTabNavigator();
 
 export default function App() {
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <Provider store={store}>
+      <Apploader/>
+      <NavigationContainer>
+        <Tab.Navigator>
+          <Tab.Screen name="Transaction" component={Transaction} />
+          <Tab.Screen name="Summary" component={Summary} />
+        </Tab.Navigator>
+      </NavigationContainer>
+    </Provider>
   );
 }
 
