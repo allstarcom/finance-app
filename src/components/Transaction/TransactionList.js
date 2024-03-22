@@ -1,13 +1,13 @@
-import { Pressable, ScrollView, Text, View, Modal } from 'react-native';
+import { ScrollView, Text, View } from 'react-native';
+import { useSelector } from 'react-redux';
 import styles from '../../styles/main';
-import { useSelector } from 'react-redux'
-
+import Transaction from './Transaction'; // Removed curly braces
 
 
 export default function TransactionList() {
 
-    const transactions = useSelector((state) => state.post.transactions);
-    console.log(posts)
+    const transactions = useSelector((state) => state.transaction.transactions);
+    console.log(transactions)
 
     return (
         <>
@@ -15,8 +15,8 @@ export default function TransactionList() {
                 {
                     transactions.length > 0 ? (
                         <ScrollView>
-                            {posts.map((task, index) => (
-                                <Task key={index} {...task} />
+                            {transactions.map((task, index) => (
+                                <Transaction key={index} {...task} />
                             ))}
                         </ScrollView>
                     ) : (
