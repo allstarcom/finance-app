@@ -1,93 +1,101 @@
-import { StyleSheet, Text } from 'react-native';
+import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: '#fff',
-    },
-    header: {
-        alignSelf: 'stretch',
-        alignItems: 'center',
-        flexDirection: 'row',
-        borderBottomColor: 'grey',
-        borderBottomWidth: 3,
-        paddingTop: 30,
-        padding: 20,
-        justifyContent: 'space-between',
-        marginTop: 15
-    },
-    tasks: {
-        flex: 1,
-        alignSelf: 'stretch',
-        backgroundColor: '#e0e0e0'
-    },
-    individualTask: {
-        alignSelf: 'stretch',
-        backgroundColor: '#fff',
-        margin: 10,
-        padding: 10,
-        borderWidth: 1,
-        borderColor: '#bcbcbc',
-        borderRadius: 10
-    },
-    form: {
-        alignSelf: 'stretch',
-        backgroundColor: '#bcbcbc',
-        padding: 10,
-        flexDirection: 'column',
-        alignItems: 'center'
-    },
-    borderShadow: {
-        shadowOffset: { width: -3, height: 4 },
-        shadowColor: '#171717',
-        shadowRadius: 4,
-        shadowOpacity: 0.3,
-        elevation: 4
-    },
-    errorMsg: {
-        color:'red'
-    },
-    btn:{
-        width: 50
-    },
-    modalContainer: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: 'rgba(0, 0, 0, 0.7)', 
-      },
-      modalContent: {
-        width: 300, 
-        backgroundColor: 'white',
-        padding: 20,
-        borderRadius: 10,
-        elevation: 5, 
-        shadowOffset: { width: 0, height: 2 },
-        shadowOpacity: 0.2,
-        shadowRadius: 4
-      },
-      modalButtons : {
-            flexDirection:'row',
-            justifyContent:'space-evenly',
-            alignItems: 'center'
-      },
-      modalTitle: {
-        fontSize: 18,
-        fontWeight: 'bold',
-        marginBottom: 10,
-      },
-      modalText: {
-        fontSize: 16,
-        marginBottom: 10,
-      },
-      closeButton: {
-        alignSelf: 'flex-end',
-        padding: 10,
-      },
-      closeButtonText: {
-        fontSize: 16,
-        color: 'grey'}
-});
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+  },
+  header: {
+    alignSelf: 'stretch',
+    flexDirection: 'row',
+    borderBottomColor: 'grey',
+    borderBottomWidth: 3,
+    paddingVertical: 20,
+    paddingHorizontal: 20,
+    justifyContent: 'space-between',
+    marginTop: 15,
+    alignItems: 'center',
+  },
+  tasks: {
+    flex: 1,
+    alignSelf: 'stretch',
+    backgroundColor: '#e0e0e0',
+  },
+  individualTask: {
+    alignSelf: 'stretch',
+    backgroundColor: '#fff',
+    margin: 10,
+    padding: 10,
+    borderWidth: 1,
+    borderColor: '#bcbcbc',
+    borderRadius: 10,
+  },
+  borderShadow: {
+    shadowOffset: { width: -3, height: 4 },
+    shadowColor: '#171717',
+    shadowRadius: 4,
+    shadowOpacity: 0.3,
+    elevation: 4,
+  },
+  transactionCard: {
+    backgroundColor: '#354F52',
+    borderRadius: 10,
+    padding: 20,
+    margin: 20,
+    shadowColor: '#000000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+    elevation: 5,
+  },
+  transactionHeader: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    marginBottom: 10,
+    color: '#FFFFFF',
+  },
+  transactionRow: {
+    flexDirection: 'row',
+    marginBottom: 5,
+  },
+  transactionLabel: {
+    fontWeight: 'bold',
+    marginRight: 5,
+    color: '#FFFFFF',
+  },
+  transactionText: {
+    flex: 1,
+    color: '#FFFFFF',
+  },
+  summaryContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#191414', // Spotify-like dark background color
+    paddingHorizontal: 20,
 
+  },
+  summaryItem: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    width: '100%',
+    marginBottom: 15,
+  },
+  summaryText: {
+    fontSize: 18,
+    color: '#FFFFFF',
+  },
+  summaryValue: {
+    fontSize: 18,
+    color: '#1DB954', // Spotify green color
+  },
+  summaryHeader: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    marginBottom: 20,
+    color: '#FFFFFF',
+  },
+});
 
 export default styles;
