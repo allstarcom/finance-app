@@ -11,7 +11,7 @@ export default function TransactionList() {
 
     return (
         <>
-            <View style={styles.tasks}>
+            <View style={styles.transactions}>
                 {
                     transactions.length > 0 ? (
                         <ScrollView>

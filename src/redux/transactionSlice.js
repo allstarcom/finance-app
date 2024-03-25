@@ -13,7 +13,6 @@ export const transactionSlice = createSlice({
     },  
 })
 
-// Action creators are generated for each case reducer function
 export const { setTransactions } = transactionSlice.actions;
 
 export default transactionSlice.reducer;

@@ -1,22 +1,7 @@
 import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-  },
-  header: {
-    alignSelf: 'stretch',
-    flexDirection: 'row',
-    borderBottomColor: 'grey',
-    borderBottomWidth: 3,
-    paddingVertical: 20,
-    paddingHorizontal: 20,
-    justifyContent: 'space-between',
-    marginTop: 15,
-    alignItems: 'center',
-  },
-  tasks: {
+  transactions: {
     flex: 1,
     alignSelf: 'stretch',
     backgroundColor: '#e0e0e0',
@@ -71,7 +56,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#191414', // Spotify-like dark background color
+    backgroundColor: '#191414', 
     paddingHorizontal: 20,
 
   },
@@ -88,7 +73,7 @@ const styles = StyleSheet.create({
   },
   summaryValue: {
     fontSize: 18,
-    color: '#1DB954', // Spotify green color
+    color: '#1DB954', 
   },
   summaryHeader: {
     fontSize: 24,
