@@ -7,6 +7,8 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { useDispatch, Provider } from 'react-redux';
 import { store } from './src/redux/store.js';
 import Apploader from './src/components/Apploader/index.js';
+import { FontAwesome } from '@expo/vector-icons';
+
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -18,8 +20,25 @@ export default function App() {
       <Apploader />
       <NavigationContainer>
         <Tab.Navigator>
-          <Tab.Screen name="Transaction" component={TransactionStack} options={{ headerShown: false }}/>
-          <Tab.Screen name="Summary" component={Summary} />
+          <Tab.Screen
+            name="Transaction"
+            component={TransactionStack}
+            options={{
+              headerShown: false,
+              tabBarIcon: ({ color, size }) => (
+                <FontAwesome name="exchange" size={size} color={color} /> // Font Awesome icon for "Transaction" tab
+              )
+            }}
+          />
+          <Tab.Screen
+            name="Summary"
+            component={Summary}
+            options={{
+              tabBarIcon: ({ color, size }) => (
+                <FontAwesome name="bar-chart" size={size} color={color} /> // Font Awesome icon for "Summary" tab
+              )
+            }}
+          />
         </Tab.Navigator>
       </NavigationContainer>
     </Provider>
@@ -29,7 +48,7 @@ export default function App() {
 function TransactionStack() {
   return (
     <Stack.Navigator>
-      <Stack.Screen name="Transactions" component={Transaction}  />
+      <Stack.Screen name="Transactions" component={Transaction} />
       <Stack.Screen name="Transaction Detail" component={TransactionDetail} />
     </Stack.Navigator>
   );
