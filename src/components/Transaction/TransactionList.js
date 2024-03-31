@@ -7,7 +7,7 @@ import Transaction from './Transaction'; // Removed curly braces
 export default function TransactionList() {
 
     const transactions = useSelector((state) => state.transaction.transactions);
-    console.log(transactions)
+    //console.log(transactions)
 
     return (
         <>

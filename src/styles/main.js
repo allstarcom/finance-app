@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
   individualTask: {
     alignSelf: 'stretch',
     backgroundColor: '#fff',
-    margin: 10,
+    margin: 15,
     padding: 10,
     borderWidth: 1,
     borderColor: '#bcbcbc',
@@ -81,6 +81,38 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     color: '#FFFFFF',
   },
+  transactionContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    paddingHorizontal: 20,
+  },
+  transactionInput: {
+    width: '100%',
+    borderWidth: 1,
+    borderColor: '#ccc',
+    borderRadius: 5,
+    paddingVertical: 12,
+    paddingHorizontal: 15,
+    marginBottom: 15,
+  },
+  transactionButton: {
+    width: '100%',
+    backgroundColor: '#007bff',
+    paddingVertical: 12,
+    borderRadius: 5,
+    alignItems: 'center',
+  },
+  transactionButtonText: {
+    color: '#fff',
+    fontSize: 16,
+  },
+  dateTimePicker: {
+    backgroundColor: 'white',
+    borderRadius: 8,
+    padding: 10,
+    color: '#000', // Set text color
+  }
 });
 
 export default styles;

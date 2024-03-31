@@ -8,6 +8,7 @@ import { useDispatch, Provider } from 'react-redux';
 import { store } from './src/redux/store.js';
 import Apploader from './src/components/Apploader/index.js';
 import { FontAwesome } from '@expo/vector-icons';
+import TransactionForm from './src/components/TranscationForm/TransactionForm.js';
 
 
 const Tab = createBottomTabNavigator();
@@ -39,7 +40,17 @@ export default function App() {
               )
             }}
           />
+          <Tab.Screen
+            name="Transaction Form"
+            component={TransactionForm}
+            options={{
+              tabBarIcon: ({ color, size }) => (
+                <FontAwesome name="bar-chart" size={size} color={color} /> 
+              )
+            }}
+          />
         </Tab.Navigator>
+
       </NavigationContainer>
     </Provider>
   );

@@ -7,6 +7,14 @@ import { useSelector } from 'react-redux';
 export default function Summary({ }) {
     const summary = useSelector((state) => state.transaction.transactions);
 
+    if (summary.length === 0) {
+        return (
+            <View>
+                <Text>No transactions available</Text>
+            </View>
+        );
+    }
+
     const totalTransactions = summary.length;
     const totalBalance = summary.reduce((total, transaction) => total + transaction.amount, 0).toFixed(2);
     const highestTransactionName = summary.reduce((highest, transaction) => (transaction.amount > highest.amount ? transaction : highest), summary[0]).transactionName;
