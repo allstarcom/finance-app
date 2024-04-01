@@ -45,7 +45,7 @@ export default function App() {
             component={TransactionForm}
             options={{
               tabBarIcon: ({ color, size }) => (
-                <FontAwesome name="bar-chart" size={size} color={color} /> 
+                <FontAwesome name="wpforms" size={size} color={color} /> 
               )
             }}
           />
